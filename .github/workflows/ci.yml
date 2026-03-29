@@ -11,6 +11,9 @@ jobs:
       - name: Mensagem inicial
         run: echo "Iniciando pipeline"
 
+      - name: Baixar código do repositório
+        uses: actions/checkout@v3
+
       - name: Listar arquivos do projeto
         run: ls -la
 
