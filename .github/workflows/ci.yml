@@ -1,0 +1,21 @@
+name: CI Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Mensagem inicial
+        run: echo "Iniciando pipeline"
+
+      - name: Listar arquivos do projeto
+        run: ls -la
+
+      - name: Executar script simples
+        run: echo "Executando validação do projeto"
+
+      - name: Mensagem final
+        run: echo "Pipeline finalizado"
