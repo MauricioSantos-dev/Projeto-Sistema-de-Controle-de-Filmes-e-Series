@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cinetrack
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cinetrack
+  template:
+    metadata:
+      labels:
+        app: cinetrack
+    spec:
+      containers:
+      - name: cinetrack
+        image: mauriciosantosdev/cinetrack:v2
+        ports:
+        - containerPort: 80
